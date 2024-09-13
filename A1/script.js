@@ -96,3 +96,61 @@ document.addEventListener('mousemove', function(event) {
     const y = event.clientY;
     coordinatesDiv.textContent = `X: ${x}, Y: ${y}`; // Update the div with the coordinates
 });
+
+
+// Question 7
+
+// Function to generate a random number between 1 and 100
+function getRandomNumber() {
+  return Math.floor(Math.random() * 100) + 1;
+}
+
+// Function to create the table
+function createTable(rows, cols) {
+  // Create the table element
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
+
+  // Create the table header row
+  const headerRow = document.createElement('tr');
+  for (let i = 1; i <= cols; i++) {
+      const th = document.createElement('th');
+      th.textContent = `Header ${i}`;
+      headerRow.appendChild(th);
+  }
+  thead.appendChild(headerRow);
+
+  // Create the table body rows with random numbers
+  for (let i = 0; i < rows; i++) {
+      const tr = document.createElement('tr');
+      for (let j = 0; j < cols; j++) {
+          const td = document.createElement('td');
+          td.textContent = getRandomNumber();
+          tr.appendChild(td);
+      }
+      tbody.appendChild(tr);
+  }
+
+  // Append thead and tbody to the table
+  table.appendChild(thead);
+  table.appendChild(tbody);
+
+  // Clear any existing table and add the new table to the page
+  const tableContainer = document.getElementById('tableContainer');
+  tableContainer.innerHTML = ''; // Clear previous content
+  tableContainer.appendChild(table);
+}
+
+// Handle the button click event
+document.getElementById('createTableBtn').addEventListener('click', function() {
+  const rows = document.getElementById('rows').value;
+  const columns = document.getElementById('columns').value;
+
+  // Input validation
+  if (rows <= 0 || columns <= 0) {
+      alert('Please enter valid numbers for rows and columns.');
+  } else {
+      createTable(parseInt(rows), parseInt(columns));
+  }
+});
