@@ -59,4 +59,26 @@ document.getElementById("clickMeBtn").addEventListener("click", addParagraph);
 
 // Question 5
 
+// Function to add hover and click events to a button
+function addButtonEvents(button) {
+  // Change background to red on mouse over
+  button.addEventListener('mouseover', function() {
+      button.style.backgroundColor = 'red';
+  });
 
+  // Revert to default background on mouse out
+  button.addEventListener('mouseout', function() {
+      button.style.backgroundColor = 'lightgray'; // Default color
+  });
+
+  // Duplicate the button on click
+  button.addEventListener('click', function() {
+      const newButton = button.cloneNode(true); // Clone the button
+      document.body.appendChild(newButton); // Append the cloned button to the body
+      addButtonEvents(newButton); // Add the same events to the new button
+  });
+}
+
+// Add events to the initial button
+const initialButton = document.querySelector('.hoverBtn');
+addButtonEvents(initialButton);
