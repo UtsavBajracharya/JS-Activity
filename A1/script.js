@@ -106,7 +106,7 @@ function getRandomNumber() {
 }
 
 // Function to create the table
-function createTable(rows, cols) {
+const createTable = function(rows, cols) {
   // Create the table element
   const table = document.createElement('table');
   const thead = document.createElement('thead');
