@@ -83,3 +83,16 @@ const duplicateBtn = function(button) {
 // Add events to the initial button
 const mainButton = document.querySelector('.hoverBtn');
 duplicateBtn(mainButton);
+
+
+// Question 6
+
+// Get the div element to display the coordinates
+const coordinatesDiv = document.getElementById('coordinates');
+
+// Event listener for mouse movement
+document.addEventListener('mousemove', function(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    coordinatesDiv.textContent = `X: ${x}, Y: ${y}`; // Update the div with the coordinates
+});
