@@ -68,7 +68,7 @@ function addButtonEvents(button) {
 
   // Revert to default background on mouse out
   button.addEventListener('mouseout', function() {
-      button.style.backgroundColor = 'lightgray'; // Default color
+      button.style.backgroundColor = 'cadetblue'; // Default color
   });
 
   // Duplicate the button on click
