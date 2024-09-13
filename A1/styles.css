@@ -1,0 +1,7 @@
+.hoverBtn {
+    padding: 8px 16px;
+    background-color:cadetblue;
+    color: azure;
+    border: none;
+    cursor: pointer;
+}

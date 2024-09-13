@@ -58,3 +58,5 @@ const addParagraph = function () {
 document.getElementById("clickMeBtn").addEventListener("click", addParagraph);
 
 // Question 5
+
+
