@@ -57,6 +57,7 @@ const addParagraph = function () {
 // Add click event listener to the existing button with the ID "clickMeBtn"
 document.getElementById("clickMeBtn").addEventListener("click", addParagraph);
 
+
 // Question 5
 
 // Function to add hover and click events to a button
@@ -76,7 +77,7 @@ const duplicateBtn = function(button) {
   button.addEventListener('click', function() {
       const newButton = button.cloneNode(true); // Clone the button
       document.body.appendChild(newButton); // Append the cloned button to the body
-      addButtonEvents(newButton , '<br>'); // Add the same events to the new button
+      duplicateBtn(newButton); // Add the same events to the new button
   });
 }
 
