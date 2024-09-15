@@ -4,11 +4,11 @@ const removeTextFields = function () {
     const textFields = document.querySelectorAll('input[type="text"]');
     textFields.forEach(textField => {
 
-    const fieldId = textField.id; // Get the ID of the text field
+    const fieldId = textField.id; // To get ID of the text field
       textField.remove();
 
 
-        // Show the removal message in the corresponding span
+        // Show the message below when field is removed
         const messageSpan = document.getElementById(`message-${fieldId}`);
         if (messageSpan) {
             messageSpan.textContent = `The ${fieldId} text field has been removed.`;
@@ -16,10 +16,9 @@ const removeTextFields = function () {
     });
 }
 
-// Add event listener to the Remove Text Fields button
+// Add event listener to Remove Text Fields button
 document.getElementById('removeFieldBtn').addEventListener('click', removeTextFields);
 
-// removeTextFields();
 
 //Question 2
 
@@ -31,7 +30,7 @@ const addNewParagraph = function () {
   paragraph.style.color = "green";
   paragraph.style.fontSize = "12px";
 
-  //Append the paragraph to the body(or any other container element)
+  //Append the paragraph to the page 
   document.body.appendChild(paragraph);
 };
 
@@ -66,11 +65,11 @@ const addParagraph = function () {
   const paragraph = document.createElement("p");
   paragraph.textContent = "Paragraph is added to the page.";
 
-  //Append the paragraph to the body(or any other container element)
+  //Append the paragraph to the page 
   document.body.appendChild(paragraph);
 };
 
-// Add click event listener to the existing button with the ID "clickMeBtn"
+// Add click event listener to the existing button with the ID (clickMeBtn)
 document.getElementById("clickMeBtn").addEventListener("click", addParagraph);
 
 
@@ -80,12 +79,12 @@ document.getElementById("clickMeBtn").addEventListener("click", addParagraph);
 // Function to add hover and click events to a button
 const duplicateBtn = function(button) {
   
-  // Change background to red on mouse over
+  // Change background to red on hover
   button.addEventListener('mouseover', function() {
       button.style.backgroundColor = 'red';
   });
 
-  // Revert to default background on mouse out
+  // Revert to default background on hover out
   button.addEventListener('mouseout', function() {
       button.style.backgroundColor = 'cadetblue'; // Default color
   });
@@ -93,8 +92,8 @@ const duplicateBtn = function(button) {
   // Duplicate the button on click
   button.addEventListener('click', function() {
       const newButton = button.cloneNode(true); // Clone the button
-      document.body.appendChild(newButton); // Append the cloned button to the body
-      duplicateBtn(newButton); // Add the same events to the new button
+      document.body.appendChild(newButton); // Append the cloned button to the page
+      duplicateBtn(newButton); // Add the same events to the new button (hover and clone)
   });
 }
 
@@ -121,9 +120,7 @@ document.addEventListener('mousemove', function(event) {
 // Question 7
 
 // Function to generate a random number between 1 and 100
-function getRandomNumber() {
-  return Math.floor(Math.random() * 100) + 1;
-}
+const getRandomNumber = ()  => Math.floor(Math.random() * 100) + 1;
 
 // Function to create the table
 const createTable = function(rows, cols) {
