@@ -164,7 +164,7 @@ document.getElementById('createTableBtn').addEventListener('click', function() {
   const rows = document.getElementById('rows').value;
   const columns = document.getElementById('columns').value;
 
-  // Input validation
+  // Input validation for rows and columns
   if (rows <= 0 || columns <= 0) {
       alert('Please enter valid numbers for rows and columns.');
   } else {
