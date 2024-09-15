@@ -11,42 +11,46 @@
 
     <div class="form">
       <label for="firstname">First name</label>
-      <input type="text" id="firstname" name="firstname"/><br>
-      <span>This text field has been removed here</span><br><br>
+      <!-- Message span -->
+      <span id="message-firstname"></span><br><br>
+
       <label for="lastname">Last name</label>
       <input type="text" id="lastname" name="lastname"/><br>
-      <span>This text field has been removed here</span><br><br>
+      <!-- Message span -->
+      <span id="message-lastname"></span><br><br>
+
       <label for="password">Password</label>
       <input type="password" id="password" name="password"/><br><br>
+
+      <p class="message">Press these buttons below and see the magic!🪄</p>
     </div>
 
+
     <div class="btnFunction">
-          <!-- Button to trigger the event -->
+
+      <!-- Button to trigger the event and remove text field -->
+      <button id="removeFieldBtn">Remove Text Fields</button>
+
+          <!-- Button to trigger the event and add paragraph -->
           <button id="addBtn">Add Paragraph</button> 
 
           <button id="clickMeBtn">Click Me</button>
-
-               <!-- Button to hover -->
-          <button class="hoverBtn">Hover Your Mouse Here</button>
-
     </div>
 
+      <div class="hover-button">
+          <!-- Button to hover -->
+          <button class="hoverBtn">Hover Your Mouse Here</button>
+      </div>
 
-
-    <p>Note: Look at the bottom of the page</p>
+    <p>Note: Look at the bottom of the page for output</p>
 
     <!-- Div to display mouse coordinates -->
      <div class="main">
        <div id="coordinates">X: 0, Y: 0</div> 
      </div>
 
-
-
-    <div class="table">
-          
-        
+    <div class="table"> 
         <h2>Create Dynamic Table</h2>
-
           <!-- Input fields to specify rows and columns -->
           <label for="rows">Rows</label>
           <input type="number" id="rows" name="rows" required><br><br>
@@ -59,11 +63,7 @@
 
           <!-- Placeholder for the generated table -->
           <div id="tableContainer"></div>
-
     </div>
-
-
-
 
     <script src="script.js"></script>
   </body>

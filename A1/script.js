@@ -3,15 +3,27 @@
 const removeTextFields = function () {
     const textFields = document.querySelectorAll('input[type="text"]');
     textFields.forEach(textField => {
+
+    const fieldId = textField.id; // Get the ID of the text field
       textField.remove();
+
+
+        // Show the removal message in the corresponding span
+        const messageSpan = document.getElementById(`message-${fieldId}`);
+        if (messageSpan) {
+            messageSpan.textContent = `The ${fieldId} text field has been removed.`;
+        }
     });
 }
 
-removeTextFields();
+// Add event listener to the Remove Text Fields button
+document.getElementById('removeFieldBtn').addEventListener('click', removeTextFields);
+
+// removeTextFields();
 
 //Question 2
 
-const addNewParagraph = function () {
+const addNewParagraph = function () { 
   const paragraph = document.createElement("p");
   paragraph.textContent = "New Paragraph Added";
 
@@ -25,6 +37,8 @@ const addNewParagraph = function () {
 
 // Add event listener to the button
 document.getElementById("addBtn").addEventListener("click", addNewParagraph);
+
+
 
 // Question 3
 
@@ -44,6 +58,8 @@ const removeElement = function(elementId) {
 
 removeElement('testId');
 
+
+
 //Question 4
 
 const addParagraph = function () {
@@ -56,6 +72,7 @@ const addParagraph = function () {
 
 // Add click event listener to the existing button with the ID "clickMeBtn"
 document.getElementById("clickMeBtn").addEventListener("click", addParagraph);
+
 
 
 // Question 5
@@ -86,6 +103,7 @@ const mainButton = document.querySelector('.hoverBtn');
 duplicateBtn(mainButton);
 
 
+
 // Question 6
 
 // Get the div element to display the coordinates
@@ -97,6 +115,7 @@ document.addEventListener('mousemove', function(event) {
     const y = event.clientY;
     coordinatesDiv.textContent = `X: ${x}, Y: ${y}`; // Update the div with the coordinates
 });
+
 
 
 // Question 7
