@@ -7,26 +7,40 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Welcome</h1>
-    <label for="firstname">First name:</label>
-    <input type="text" id="firstname" name="firstname"/><br><br>
-    <label for="lastname">Last name:</label>
-    <input type="text" id="lastname" name="lastname"/><br><br>
+    <h1>Welcome to the JavaScript Functions</h1>
 
-    <!-- Button to trigger the event -->
-    <button id="addBtn">Add Paragraph</button> 
+    <div class="form">
+      <label for="firstname">First name</label>
+      <input type="text" id="firstname" name="firstname"/><br>
+      <span>This text field has been removed here</span><br><br>
+      <label for="lastname">Last name</label>
+      <input type="text" id="lastname" name="lastname"/><br>
+      <span>This text field has been removed here</span><br><br>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password"/><br><br>
+    </div>
 
-    <button id="clickMeBtn">Click Me</button> 
+    <div class="btnFunction">
+          <!-- Button to trigger the event -->
+          <button id="addBtn">Add Paragraph</button> 
 
-     <!-- Button to hover -->
-     <button class="hoverBtn">Hover Your Mouse Here</button><br> <br>
+          <button id="clickMeBtn">Click Me</button> 
+
+          <!-- Button to hover -->
+          <button class="hoverBtn">Hover Your Mouse Here</button><br> <br>
+
+    </div>
+
+
 
 
     <!-- Div to display mouse coordinates -->
-    <div id="coordinates">X: 0, Y: 0</div> 
+     <div class="main">
+       <div id="coordinates">X: 0, Y: 0</div> 
+     </div>
 
 
-    <h2>Dynamic Table Creator</h2>
+    <h2>Create Dynamic Table</h2>
 
     <!-- Input fields to specify rows and columns -->
     <label for="rows">Rows:</label>

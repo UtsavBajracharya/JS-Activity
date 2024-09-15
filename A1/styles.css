@@ -1,3 +1,49 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color:beige;
+
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    color: red;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 8px;
+
+}
+
+input {
+    padding: 10px ;
+}
+
+#addBtn, #clickMeBtn {
+    padding: 6px 12px;
+    background-color:azure;
+    cursor: pointer;
+}
+
+#addBtn:hover, #clickMeBtn:hover {
+    background-color:rgb(218, 218, 218);
+
+}
+
+
 .hoverBtn {
     padding: 8px 16px;
     background-color:cadetblue;
@@ -7,14 +53,18 @@
     margin-left: 20px;
 }
 
-/* Styling the div to display the coordinates */
+.main {
+    position: relative;
+    display: flex;
+    justify-content: end;
+
+}
+
 #coordinates {
     position: fixed;
-    bottom: 10px;
-    left: 10px;
-    padding: 10px;
-    background-color: lightgray;
-    border: 1px solid black;
-    font-size: 16px;
-    z-index: 1000; /* Ensure it's above other content */
+    top: 80px;
+    background-color: azure;
+    padding: 8px 16px;
+    border: 1px solid #000;
 }
+

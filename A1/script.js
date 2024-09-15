@@ -1,13 +1,13 @@
-//Question 1
+// Question 1
 
-// const removeTextFields = function () {
-//     const textFields = document.querySelectorAll('input[type="text"]');
-//     textFields.forEach(textField => {
-//       textField.remove();
-//     });
-// }
+const removeTextFields = function () {
+    const textFields = document.querySelectorAll('input[type="text"]');
+    textFields.forEach(textField => {
+      textField.remove();
+    });
+}
 
-// removeTextFields();
+removeTextFields();
 
 //Question 2
 
@@ -26,23 +26,23 @@ const addNewParagraph = function () {
 // Add event listener to the button
 document.getElementById("addBtn").addEventListener("click", addNewParagraph);
 
-//Question 3
+// Question 3
 
-// const removeElement = function(elementId) {
+const removeElement = function(elementId) {
 
-//   const element = document.getElementById('firstname');
+  const element = document.getElementById(elementId);
 
-//   if (element)  {
-//     element.remove();
-//     console.log(`Element with the Id ${elementId} has been removed.`);
+  if (element)  {
+    element.remove();
+    console.log(`Element with the Id ${elementId} has been removed.`);
 
-//   }
-//   else {
-//     console.log(`Error: Id named ${elementId} was not found in the page!`);
-//   }
-// }
+  }
+  else {
+    console.log(`Error: Id named ${elementId} was not found in the page!`);
+  }
+}
 
-// removeElement();
+removeElement('testId');
 
 //Question 4
 
