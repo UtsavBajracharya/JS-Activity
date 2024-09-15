@@ -63,7 +63,7 @@ input {
 
 }
 
-#addBtn:hover, #clickMeBtn:hover, #createTableBtn:hover {
+#addBtn:hover, #clickMeBtn:hover, #createTableBtn:hover, #removeFieldBtn:hover {
     background-color:rgb(232, 232, 232);
 
 }
